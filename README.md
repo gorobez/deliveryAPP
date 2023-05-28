@@ -1,6 +1,6 @@
 ## UP
 ```
-cp .env.exapmle .env
+cp .env.example .env
 make up
 ```
 
