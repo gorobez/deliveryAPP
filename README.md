@@ -1,5 +1,8 @@
 ## UP
+```
+cp .env.exapmle .env
 make up
+```
 
 ## APP
 http://localhost:4000
