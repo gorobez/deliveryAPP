@@ -8,4 +8,4 @@ make up
 http://localhost:4000
 
 ## Mongo-express
-http://localhost:8081
+http://localhost:8081/mongo-express
