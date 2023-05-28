@@ -43,17 +43,3 @@ ps:
 in:
 	docker-compose -f docker-compose.yml exec $(c) /bin/bash
 
-firststart:
-#	sed -i "s/_UID_/`id -u`/g" .env
-	mkdir -p grafana/grafana_data prometheus_data
-	make up
-	./grafapi.py
-
-refirststart:
-	make down
-#	sed -i "`grep -n "TOKEN" .env | cut -d : -f 1`d" .env
-#	echo "TOKEN=test" >> .env
-#	sed -i '/TOKEN=/d' .env
-#	cat .env
-	rm -rf ./grafana/grafana_data/grafana.db ./grafana/grafana_data/plugins ./prometheus_data/*
-	make firststart
