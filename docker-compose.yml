@@ -1,0 +1,33 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '4000:4000'
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.2
+    ports:
+      - '27017:27017'
+
+  mongo-express:
+    image: mongo-express:0.54.0
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGODB_ADMINUSERNAME}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGODB_ADMINPASSWORD}
+      ME_CONFIG_BASICAUTH_USERNAME: ${WEBAUTH_NAME}
+      ME_CONFIG_BASICAUTH_PASSWORD: ${WEBAUTH_PASSWORD}
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: ${MONGODB_ENABLE_ADMIN}
+      ME_CONFIG_MONGODB_AUTH_DATABASE: ${MONGODB_DB}
+      ME_CONFIG_MONGODB_AUTH_USERNAME: ${MONGODB_USER}
+      ME_CONFIG_MONGODB_AUTH_PASSWORD: ${MONGODB_PASSWORD}
+      ME_CONFIG_SITE_BASEURL: "/mongo-express"
+    ports:
+      - '${MONGODB_EXPRESS_PORT}:8081'
+    depends_on:
+      - mongo
