@@ -3,8 +3,10 @@
 cp .env.example .env
 make up
 ```
+## Frontend
+http://localhost:5502
 
-## APP
+## Backend
 http://localhost:4000
 
 ## Mongo-express

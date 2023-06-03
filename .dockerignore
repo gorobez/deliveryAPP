@@ -1,6 +1,11 @@
-hony.postman_collection.json
-.env
+deliveryapp.postman_collection.json
+.env*
 .gitignore
 .dockerignore
 docker-compose.yml
 Makefile
+.gitignore
+.git
+README.md
+Dockerfile
+.vscode
