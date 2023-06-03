@@ -27,6 +27,7 @@ app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
 // Enable CORS middleware
 app.use(cors({ origin: 'http://localhost:5502' }));
+app.use(cors({ origin: 'https://gorobez.github.io/deliveryAPP/' }));
 
 // Connect to MongoDB
 mongoose.connect('mongodb://mongo/shop', { useNewUrlParser: true, useUnifiedTopology: true })

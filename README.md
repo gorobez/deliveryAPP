@@ -10,7 +10,7 @@ make up
 cd frontend
 npm i
 ```
-run liveserver
+run vscode liveserver
 ## Frontend
 http://localhost:5502
 
