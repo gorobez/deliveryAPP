@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__left-block">
+                <div class="header__logo">
+                    <img src="icons/logo.svg" alt="Логотип">
+                </div>
+                <nav class="header__links">
+                    <a href="index.html" class="header__link">Shops / </a>
+                    <a data-cart href="cart.html" class="header__link header__link--active">Cart</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="main-cart">
+            <div class="container">
+                <div class="main-cart__body">
+                    <div class="main-cart__content">
+                        <div class="main-cart__list-product bag-list"></div>
+                        <div class="main-cart__actions">
+                            <div class="main-cart__order order-cart">
+                                <div class="order-cart__header">
+                                    <h5 class="order-cart__title">Order Total:</h5>
+                                    <div class="order-cart__total"><span></span> EUR</div>
+                                </div>
+                            </div>
+                            <a href="index.html" class="main-cart__contshoping">continue
+                                shopping</a>
+                        </div>
+                    </div>
+                    <div class="main-cart-form form-cart">
+                        <h2 class="form-cart__title">Contact Information</h2>
+                        <form id="save" action="/submit" method="post">
+                            <div class="form-cart__line">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-cart__line">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-cart__line">
+                                <label for="phone">Phone:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-cart__line">
+                                <label for="address">Address:</label>
+                                <textarea id="address" name="address" rows="4" cols="30" required></textarea>
+                            </div>
+                            <button class="form-cart__button" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="social">
+                <div class="subtitle">Social:</div>
+                <a href="#" class="link">instagram</a>
+                <a href="#" class="link">facebook</a>
+            </div>
+            <div class="pepper">
+                <img src="icons/veg.svg" alt="pepper">
+            </div>
+            <div class="call">
+                <div class="subtitle">Call us</div>
+                <a href="#" class="link">+380678341034</a>
+                <a href="#" class="link">+380500941356</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../dist/js/bundle.js"></script>
+</body>
+
+</html>

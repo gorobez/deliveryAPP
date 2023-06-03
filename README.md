@@ -1,8 +1,16 @@
-## UP
+## Up backend
 ```
+cd backend
 cp .env.example .env
 make up
 ```
+
+## Up frontend
+```
+cd frontend
+npm i
+```
+run liveserver
 ## Frontend
 http://localhost:5502
 

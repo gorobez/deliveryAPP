@@ -13,6 +13,8 @@ services:
     image: mongo:4.2
     ports:
       - '27017:27017'
+    volumes:
+      - ./docker/mongo/:/docker-entrypoint-initdb.d/
 
   mongo-express:
     image: mongo-express:0.54.0
