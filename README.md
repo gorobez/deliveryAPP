@@ -1,19 +1,18 @@
+## Up frontend
+```
+npm i
+```
+
+run vscode liveserver
+## Frontend
+http://localhost:5502
+
 ## Up backend
 ```
 cd backend
 cp .env.example .env
 make up
 ```
-
-## Up frontend
-```
-cd frontend
-npm i
-```
-run vscode liveserver
-## Frontend
-http://localhost:5502
-
 ## Backend
 http://localhost:4000
 
